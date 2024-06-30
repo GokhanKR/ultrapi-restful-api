@@ -7,9 +7,8 @@
   },
   "autoload": {
     "psr-4": {
-      "UPI\\": [
-        "core/",
-        "src/"
+      "Upi\\": [
+        "core/"
       ]
     },
     "files": [
