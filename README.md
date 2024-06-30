@@ -4,7 +4,7 @@
   <img src="https://gokhankorul.dev/images/upi-logo-22062024090201.png">
 </p>
 
-## Project Description
+# Project Description
 
 This project, based on RESTful API architecture, is a web service developed using the RESTful (Representational State Transfer) architecture. It enables users to perform specific operations through interactions over the HTTP protocol
 
@@ -16,7 +16,7 @@ Ultra Fast API(UPI or Ultrapi) is built for developing self-modularity applicati
 - Security: API endpoints are protected with authentication and authorization mechanisms.
 - File based Method Architecture: Promotes modularity and maintainability for individual functionalities.
 
-# File based Method Architecture
+## File based Method Architecture
 
 In the context of this API, the "File based Method Architecture" refers to a design approach where API endpoints are directly mapped to specific PHP files containing the logic for processing requests. This method ensures that each endpoint's functionality is encapsulated within its corresponding PHP file, promoting modularity and maintainability in the application architecture.
 
@@ -30,7 +30,27 @@ In the context of this API, the "File based Method Architecture" refers to a des
 
 **Isolation and Security**: By isolating each endpoint's logic into separate PHP files, the architecture enhances security by limiting the scope of execution and minimizing the potential impact of errors or vulnerabilities.
 
-## Benefits
+# Requirements
+
+To run this project, ensure the following requirements are met:
+
+- Composer
+- PHP 8.2^
+
+# Installation
+
+To install the project, follow these steps:
+
+1. Clone the project: 
+```bash
+git clone https://github.com/GokhanKR/ultrapi-restful-api
+```
+2. Use Composer to install dependencies: 
+```bash
+composer install
+```
+
+# Benefits
 
 **Modularity**: Each endpoint's logic is encapsulated in a single PHP file, facilitating easier maintenance and updates.
 
