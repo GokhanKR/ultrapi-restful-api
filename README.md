@@ -74,8 +74,8 @@ This project is developed to enhance modularity in the project development proce
 
 When making a request, the request must include the `requestMethod` field. This field references the file path of the corresponding method within the API. Example request content:
 
+**an example post request**
 ```json
-// POST request
 {
     "data": {
         "postId": 1,
@@ -147,7 +147,7 @@ public function _toResult(int $postId, string $anotherParam = '99')
 
 The parameters required by the method must be sent by the client in the specified types; otherwise, an error will be returned.
 
-**an example Post Request:**
+**an example post request:**
 ```json
 {
 	"data": {
