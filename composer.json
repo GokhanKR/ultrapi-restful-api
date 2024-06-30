@@ -1,0 +1,39 @@
+{
+  "name": "ultrapi/restful-api",
+  "description": "High-Performance API Built with PHP",
+  "version": "1.0.3",
+  "extra": {
+    "name": "Ultra Fast API - PHP based RESTful API"
+  },
+  "autoload": {
+    "psr-4": {
+      "UPI\\": [
+        "core/",
+        "src/"
+      ]
+    },
+    "files": [
+      "Constants.php"
+    ]
+  },
+  "require": {
+    "vlucas/phpdotenv": "^5.1",
+    "jawira/case-converter": "^3.4",
+    "ultrapi/config": "*",
+    "ultrapi/router": "*",
+    "ultrapi/localization": "*",
+    "ultrapi/controller": "*",
+    "ultrapi/exception": "*",
+    "ultrapi/ceremony": "*"
+  },
+  "authors": [
+    {
+      "name": "Gökhan Korul",
+      "email": "me@gokhankorul.dev",
+      "homepage": "https://gokhankorul.dev/",
+      "role": "Creator"
+    }
+  ],
+  "license": "MIT",
+  "minimum-stability": "dev"
+}
