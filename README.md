@@ -147,17 +147,21 @@ public function _toResult(int $postId, string $anotherParam = '99')
 
 The parameters required by the method must be sent by the client in the specified types; otherwise, an error will be returned.
 
+**an example Post Request:**
 ```json
-// POST Request
 {
 	"data": {
-		"postId": "1", // postId should be integer but sent as string
+		"postId": "1",
 		"requestMethod": "Blog/Posts/PostDetail"
 	},
 	"language": "en-US"
 }
+```
 
-// Output:
+Here, postId should be an integer, but it's being sent as a string.
+
+**Output:**
+```json
 {
 	"status": 500,
 	"message": "Please provide parameters in the required type (postId:[int])",
@@ -173,9 +177,8 @@ UPI provides configuration management. These files are located under the `config
 $info = Ultrapi\Config\Config::get('Info')
 ```
 
-**Output:**
+**Output:** HTTP Response with Content-Type: JSON
 ```php
-// HTTP Response with Content-Type: JSON
 Array ( 
     'API_NAME' => 'Ultra Fast API - RESTful API',
     'API_VERSION' => '1.0.3'
@@ -233,9 +236,8 @@ public function _toResult(...$args): \UpiCore\Router\RouterContext
 }
 ```
 
-**Output:**
+**Output:** HTTP Response with Content-Type: JSON
 ```json
-// HTTP Response with Content-Type: JSON
 {
     "status": "404",
     "data": {
