@@ -18,12 +18,12 @@
   "require": {
     "vlucas/phpdotenv": "^5.1",
     "jawira/case-converter": "^3.4",
-    "ultrapi/config": "*",
-    "ultrapi/router": "*",
-    "ultrapi/localization": "*",
-    "ultrapi/controller": "*",
-    "ultrapi/exception": "*",
-    "ultrapi/ceremony": "*"
+    "ultrapi/config": "^1.0",
+    "ultrapi/router": "^1.0",
+    "ultrapi/localization": "^1.0",
+    "ultrapi/controller": "^1.0",
+    "ultrapi/exception": "^1.0",
+    "ultrapi/ceremony": "^1.0"
   },
   "authors": [
     {
