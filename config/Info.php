@@ -6,5 +6,5 @@ $composerData = json_decode(file_get_contents($composerFilePath), true);
 
 return [
     'API_NAME'      => $composerData['extra']['name'],
-    'API_VERSION'   => $composerData['version'] ?? null,
+    'API_VERSION'   => $composerData['extra']['version'] ?? null,
 ];

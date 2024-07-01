@@ -1,9 +1,9 @@
 {
   "name": "ultrapi/restful-api",
   "description": "High-Performance API Built with PHP",
-  "version": "1.0.3",
   "extra": {
-    "name": "Ultra Fast API - PHP based RESTful API"
+    "name": "Ultra Fast API - PHP based RESTful API",
+    "version": "1.0.3"
   },
   "autoload": {
     "psr-4": {
