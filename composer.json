@@ -37,8 +37,7 @@
   "minimum-stability": "dev",
   "scripts": {
     "post-install-cmd": [
-      "rm README.md",
-      "rm MLHZQZRTAhh8mXBpkLyeYRSPfOKOEop5jZxmfYDQtQ8.html"
+      "rm README.md"
     ]
   }
 }
