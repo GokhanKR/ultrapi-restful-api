@@ -175,7 +175,6 @@ The parameters required by the method must be sent by the client in the specifie
     "postId": "1",
     "requestMethod": "Blog/Posts/PostDetail"
   },
-  "language": "en-US"
 }
 ```
 
