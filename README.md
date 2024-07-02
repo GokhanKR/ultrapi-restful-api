@@ -194,7 +194,7 @@ Here, postId should be an integer, but it's being sent as a string.
 UPI provides configuration management. These files are located under the `config/` directory. With the configuration system, you can manage settings globally throughout the project.
 
 ```php
-$info = Ultrapi\Config\Config::get('Info')
+$info = \UpiCore\Config\Config::get('Info')
 ```
 
 **Output:** HTTP Response with Content-Type: JSON
