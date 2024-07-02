@@ -261,8 +261,8 @@ public function _toResult(...$args): \UpiCore\Router\RouterContext
 **Output:** HTTP Response with Content-Type: JSON
 ```json
 {
-	"status": 404,
-	"message": "Item not found",
-	"data": null
+  "status": 404,
+  "message": "Item not found",
+  "data": null
 }
 ```
