@@ -10,6 +10,8 @@ This project, based on RESTful API architecture, is a web service developed usin
 
 Ultra Fast API(UPI or Ultrapi) is built for developing self-modularity applications based on PHP. UPI aims to develop multi purpose project and particular systems.
 
+<br />
+
 # Key Features
 
 - JSON and XML Support: The API can send and receive data in both JSON and XML formats, enhancing compatibility with a wide range of applications.
@@ -17,6 +19,10 @@ Ultra Fast API(UPI or Ultrapi) is built for developing self-modularity applicati
 - File based Method Architecture: Promotes modularity and maintainability for individual functionalities.
 
 ## File based Method Architecture
+
+<p align="center">
+  <img src="https://gokhankorul.dev/images/linkedin-cover-3-02072024104513.jpg">
+</p>
 
 In the context of this API, the "File based Method Architecture" refers to a design approach where API endpoints are directly mapped to specific PHP files containing the logic for processing requests. This method ensures that each endpoint's functionality is encapsulated within its corresponding PHP file, promoting modularity and maintainability in the application architecture.
 
@@ -30,12 +36,16 @@ In the context of this API, the "File based Method Architecture" refers to a des
 
 **Isolation and Security**: By isolating each endpoint's logic into separate PHP files, the architecture enhances security by limiting the scope of execution and minimizing the potential impact of errors or vulnerabilities.
 
+<br />
+
 # Requirements
 
 To run this project, ensure the following requirements are met:
 
 - Composer
 - PHP 8.2^
+
+<br />
 
 # Installation
 
@@ -50,6 +60,8 @@ git clone https://github.com/GokhanKR/ultrapi-restful-api
 composer install
 ```
 
+<br />
+
 # Benefits
 
 **Modularity**: Each endpoint's logic is encapsulated in a single PHP file, facilitating easier maintenance and updates.
@@ -58,15 +70,22 @@ composer install
 
 **Flexibility**: Allows for customization and extension of endpoint functionality without impacting other parts of the application.
 
+<br />
+
 # Project Goals
 
 - Flexibility: The project is designed to be flexible enough to integrate with various platforms.
 - Performance: Achieving high performance and fast response times.
 - User Experience: Providing a user-friendly experience and continuously improving based on user feedback.
 
+<br />
+
 # Conclusion
 
 This project is developed to enhance modularity in the project development process and to ensure that distributed systems are more flexible and manageable by adopting a microservices architecture.
+
+<br />
+<br />
 
 # Basic Documentation
 
@@ -77,10 +96,10 @@ When making a request, the request must include the `requestMethod` field. This 
 **an example post request**
 ```json
 {
-    "data": {
-        "postId": 1,
-        "requestMethod": "Blog/Posts/PostDetail"
-    },
+  "data": {
+    "postId": 1,
+    "requestMethod": "Blog/Posts/PostDetail"
+  },
 }
 ```
 
@@ -102,10 +121,12 @@ index.php
 An important aspect to note is that the target file is indicated based on the request method (POST, GET, DELETE, etc.). If the request had been made using GET, the file name would need to be `GET_PostDetail.php`. Typically, a method looks like this:
 
 ```php
+// methods/Blog/Posts/GET_PostDetail.php
 
 return new class extends \UpiCore\Controller\UpiMethod
 {
 
+    // The `_toResult` function is defined for the response output.
     public function _toResult(int $postId, string $anotherParam = '99'): \UpiCore\Router\RouterContext
     {
         if (!\in_array($postId, [1, 2, 3])) {
@@ -150,11 +171,11 @@ The parameters required by the method must be sent by the client in the specifie
 **an example post request:**
 ```json
 {
-	"data": {
-		"postId": "1",
-		"requestMethod": "Blog/Posts/PostDetail"
-	},
-	"language": "en-US"
+  "data": {
+    "postId": "1",
+    "requestMethod": "Blog/Posts/PostDetail"
+  },
+  "language": "en-US"
 }
 ```
 
@@ -163,9 +184,9 @@ Here, postId should be an integer, but it's being sent as a string.
 **Output:**
 ```json
 {
-	"status": 500,
-	"message": "Please provide parameters in the required type (postId:[int])",
-	"data": null
+  "status": 500,
+  "message": "Please provide parameters in the required type (postId:[int])",
+  "data": null
 }
 ```
 
@@ -239,9 +260,9 @@ public function _toResult(...$args): \UpiCore\Router\RouterContext
 **Output:** HTTP Response with Content-Type: JSON
 ```json
 {
-    "status": "404",
-    "data": {
-       "errMessage": "Item not found."
-    }
+  "status": "404",
+  "data": {
+      "errMessage": "Item not found."
+  }
 }
 ```
