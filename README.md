@@ -249,6 +249,8 @@ UPI handles error management using PHP-based exception handling. If you want to 
 // an example usage
 public function _toResult(...$args): \UpiCore\Router\RouterContext
 {
+    ...
+    
     if (empty($itemList))
         throw new \UpiCore\Exception\UpiException('TODOLIST_ITEM_NOT_FOUND');
 
@@ -259,9 +261,8 @@ public function _toResult(...$args): \UpiCore\Router\RouterContext
 **Output:** HTTP Response with Content-Type: JSON
 ```json
 {
-  "status": "404",
-  "data": {
-      "errMessage": "Item not found."
-  }
+	"status": 404,
+	"message": "Item not found",
+	"data": null
 }
 ```
